@@ -1,4 +1,3 @@
-
 const counter = document.getElementById("counter");
 const valueSpan = document.getElementById("value");
 
