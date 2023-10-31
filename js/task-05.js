@@ -1,19 +1,12 @@
-const nameInput = document.getElementById("name-input")
-const nameOutput = document.getElementById("name-output")
-nameInput.addEventListener("input", (event) => {
-    const inputValue = event.target.value;
-    nameOutput.textContent = inputValue || "Anonymous";
-  });
-  
-//   const nameInput = document.getElementById("name-input");
-//   const nameOutput = document.getElementById("name-output");
+const nameInput = document.getElementById("name-input");
+const nameOutput = document.getElementById("name-output");
 
-//     nameInput.addEventListener("input", () => {
-//       nameOutput.textContent = nameInput.value || "Anonymous";
-//     });
+nameInput.addEventListener("input", () => {
+  const inputValue = nameInput.value.trim();
 
-//     nameInput.addEventListener("keyup", (event) => {
-//       if (event.key === "Enter") {
-//         nameInput.value = "";
-//       }
-//     });
+  if (inputValue === "") {
+    nameOutput.textContent = "Anonymous";
+  } else {
+    nameOutput.textContent = inputValue;
+  }
+});
